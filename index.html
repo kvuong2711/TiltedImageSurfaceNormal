@@ -1,24 +1,71 @@
 ---
 layout: default
 title: Surface Normal Estimation of Tilted Images via Spatial Rectifier
-abstract: Main content goes here.
 ---
-<h1>Surface Normal Estimation of Tilted Images via Spatial Rectifier</h1>
+<div class="title">
+  <h1 class="title-name">
+    <strong>Surface Normal Estimation of Tilted Images via Spatial Rectifier</strong>
+  </h1>
+</div>
 
-<h4 style="text-align: center; margin-top: -25px">ECCV 2020 Spotlight</h4>
+<div class="eccv-conf">
+  <h4>ECCV 2020 Spotlight</h4>
+</div>
 
-<div class="author_list">
+<div class="authors">
   <div>Tien Do</div>
   <div>Khiem Vuong</div>
   <div>Stergios Roumeliotis</div>
   <div>Hyun Soo Park</div>
 </div>
 
-<p class="center">University of Minnesota</p>
+<p style="text-align: center;">University of Minnesota</p>
 
-<h2>Abstract</h2>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc molestie mi eget elit ornare, ut viverra tellus ultrices. In lorem mauris, imperdiet quis tincidunt quis, rhoncus eu ex. In tincidunt leo a sem porttitor, et euismod enim consectetur. Cras porta ut odio accumsan sollicitudin. Aenean auctor diam et ultrices tincidunt. Etiam egestas nisl ut justo fringilla laoreet. In hac habitasse platea dictumst. Donec nec mauris leo. Nullam at luctus nunc. Proin lacinia viverra tincidunt. Duis finibus rhoncus fermentum. Integer consectetur eleifend lorem, vel scelerisque justo rhoncus vitae. Praesent volutpat nisl at eros feugiat scelerisque.
+<div class="abstract">
+  <h2>Abstract</h2>
+  <p style="text-align: justify;">
+    We present a spatial rectifier to estimate surface normal of tilted images.
+    Tilted images are of particular interest as more visual data are captured by
+    embodied sensors such as body-/robot-mounted cameras. Existing approaches
+    exhibit bounded performance on predicting surface normal because they were
+    trained by gravity-aligned images. Our two main hypotheses are: (1) visual
+    scene layout is indicative of the gravity direction; and (2) not all surfaces
+    are equally represented, i.e., there exists a transformation of the tilted
+    image to produce better surface normal prediction. We design the spatial
+    rectifier that is learned to transform the surface normal distribution of
+    the tilted image such that it matches to that of gravity aligned images.
+    The spatial rectifier is parametrized by a principle direction of the
+    rectified image that maximizes the distribution match. When training,
+    we jointly learn the gravity and principle direction that can synthesize
+    images and surface normal to supervise the surface normal estimator.
+    Inspired by the panoptic feature pyramid network, a new network that can
+    access to both global and local visual features is proposed by leveraging
+    dilated convolution in the decoder. The resulting estimator produces accurate
+    surface normal estimation, outperforming state-of-the-art methods and data
+    augmentation baseline. We evaluate our method not only on ScanNet and NYUv2
+    but also on a new dataset called Tilt-RGBD that includes substantial roll and
+    pitch camera motion captured by body-mounted cameras.
+  </p>
+</div>
 
-Nullam consequat facilisis aliquam. Maecenas tincidunt accumsan ligula, nec congue diam vestibulum non. In eu ullamcorper justo. Quisque faucibus nulla ipsum, nec fringilla urna aliquam pretium. Nulla semper nulla at ante consectetur ultricies. Suspendisse sed aliquet dolor. Donec semper mattis lacus quis euismod. Ut blandit egestas elementum. Aliquam a lacus vitae lorem efficitur feugiat.
+<div class="video">
+  <h2>Videos Testing</h2>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GuLzjnFGDKs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
 
-Integer commodo, neque sit amet fringilla varius, ipsum felis venenatis nisl, in pretium est augue nec est. Donec et magna consequat, maximus eros sit amet, gravida turpis. Suspendisse potenti. Quisque nec lectus id tellus aliquet vulputate. Nunc ornare, nisl vitae pulvinar ornare, quam magna finibus sapien, a laoreet magna nibh ac nisl. Aenean sit amet purus at risus lobortis tincidunt. Aliquam volutpat interdum ipsum ut commodo. Maecenas nec viverra sapien, in sagittis enim. Maecenas a fermentum urna.
+<div class="image">
+  <h2>Images Testing (single image)</h2>
+    <a href="https://arxiv.org/abs/2005.08877"><img src="images/tilt-inverted.jpeg" class="single-image"></a>
+</div>
+
+<div class="image">
+  <h2>Images Testing (multiple images)</h2>
+  <div class="grid-container">
+    <div><a href="https://arxiv.org/abs/2005.08877"><img src="images/tilt-inverted.jpeg" class="small-image"></a></div>
+    <div><a href="https://arxiv.org/abs/2005.08877"><img src="images/dummy.jpg" class="small-image"></a></div>
+  <!--  <div class="item3"><a href="https://arxiv.org/abs/2005.08877"><img src="images/tilt-inverted.jpeg" class="paper-thumbnail"></a></div>-->
+  <!--  <div class="item4"><a href="https://arxiv.org/abs/2005.08877"><img src="images/tilt-inverted.jpeg" class="paper-thumbnail"></a></div>-->
+  </div>
+</div>

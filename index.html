@@ -13,14 +13,8 @@ title: Surface Normal Estimation of Tilted Images via Spatial Rectifier
   <h3>ECCV 2020 Spotlight</h3>
 </div>
 
-<!--<div class="authors">-->
-<!--  <div>Tien Do</div>-->
-<!--  <div><a href="https://www.khiemvuong.com">Khiem Vuong</a></div>-->
-<!--  <div><a href="https://www-users.cs.umn.edu/~stergios/">Stergios Roumeliotis</a></div>-->
-<!--  <div><a href="https://www-users.cs.umn.edu/~hspark/">Hyun Soo Park</a></div>-->
-<!--</div>-->
 
-<p style="text-align: center;">
+<p style="text-align: center; font-size: 1.1em">
   Tien Do&emsp;&emsp;&emsp;
   <a href="https://www.khiemvuong.com" target="_blank">Khiem Vuong</a>&emsp;&emsp;&emsp;
   <a href="https://www-users.cs.umn.edu/~stergios/" target="_blank">Stergios Roumeliotis</a>&emsp;&emsp;&emsp;
@@ -30,7 +24,6 @@ title: Surface Normal Estimation of Tilted Images via Spatial Rectifier
 
 <p style="text-align: center; font-size: 1.1em">University of Minnesota</p>
 
-<br>
 
 <div class="top_categories">
   <div class="wrapper">
@@ -66,28 +59,21 @@ title: Surface Normal Estimation of Tilted Images via Spatial Rectifier
 <div class="abstract">
   <h2>Abstract</h2>
   <p style="text-align: justify;">
-    We present a spatial rectifier to estimate surface normal of tilted images.
-    Tilted images are of particular interest as more visual data are captured by
-    embodied sensors such as body-/robot-mounted cameras. Existing approaches
-    exhibit bounded performance on predicting surface normal because they were
-    trained by gravity-aligned images. Our two main hypotheses are: (1) visual
-    scene layout is indicative of the gravity direction; and (2) not all surfaces
-    are equally represented, i.e., there exists a transformation of the tilted
-    image to produce better surface normal prediction. We design the spatial
-    rectifier that is learned to transform the surface normal distribution of
-    the tilted image such that it matches to that of gravity aligned images.
-    The spatial rectifier is parametrized by a principle direction of the
-    rectified image that maximizes the distribution match. When training,
-    we jointly learn the gravity and principle direction that can synthesize
-    images and surface normal to supervise the surface normal estimator.
-    Inspired by the panoptic feature pyramid network, a new network that can
-    access to both global and local visual features is proposed by leveraging
-    dilated convolution in the decoder. The resulting estimator produces accurate
-    surface normal estimation, outperforming state-of-the-art methods and data
-    augmentation baseline. We evaluate our method not only on ScanNet and NYUv2
-    but also on a new dataset called Tilt-RGBD that includes substantial roll and
-    pitch camera motion captured by body-mounted cameras.
+    In this paper, we present a spatial rectifier to estimate surface normals of tilted images. Tilted images are of particular interest as more visual data are captured by arbitrarily oriented sensors such as body-/robot-mounted cameras. Existing approaches exhibit bounded performance on predicting surface normals because they were trained using gravity-aligned images. Our two main hypotheses are: (1) visual scene layout is indicative of the gravity direction; and (2) not all surfaces are equally represented by a learned estimator due to the structured distribution of the training data, thus, there exists a transformation for each tilted image that is more responsive to the learned estimator than others. We design a spatial rectifier that is learned to transform the surface normal distribution of a tilted image to the rectified one that matches the gravity-aligned training data distribution. Along with the spatial rectifier, we propose a novel truncated angular loss that offers a stronger gradient at smaller angular errors and robustness to outliers. The resulting estimator outperforms the state-of-the-art methods including data augmentation baselines not only on ScanNet and NYUv2 but also on a new dataset called Tilt-RGBD that includes considerable roll and pitch camera motion.
   </p>
+</div>
+
+<div class="video">
+  <h2>Teaser Video</h2>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3TswQYOK9N0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
+<div class="video">
+  <h2>Full Presentation</h2>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/4mBnse--cBs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  </div>
 </div>
 
 <div class="video">
@@ -96,6 +82,7 @@ title: Surface Normal Estimation of Tilted Images via Spatial Rectifier
     <iframe width="560" height="315" src="https://www.youtube.com/embed/RS0K-SDqTYY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </div>
+
 
 <div class="image">
   <h2>Tilt-RGBD Dataset</h2>

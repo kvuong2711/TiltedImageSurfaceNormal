@@ -29,14 +29,15 @@ h2 {
 }
 a,
 a:visited {
-	color: $link-color;
 	text-decoration: underline;
-	font-weight: bold;
+	color: $font-color
 }
+
 a:hover {
 	color: $link-hover-color;
 	text-decoration: underline;
 }
+
 header {
 	background: $header;
 	padding: 0px 15px;
@@ -80,16 +81,45 @@ h1.title-name {
 }
 
 .authors {
-	font-size: 0.9em;
+	font-size: 1.1em;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	margin-top: 0;
 	margin-bottom: 0;
-	margin-left: 20%;
-	margin-right: 20%;
+	margin-left: 15%;
+	margin-right: 15%;
 }
 
+.top_categories {
+	padding: 10px;
+	display: block;
+	text-align: center;
+}
+
+.cat_icon {
+	color: black;
+	text-align: center;
+}
+.cat_text {
+	color: black;
+	text-align: center;
+	font-weight: bold;
+}
+
+.wrapper {
+	display: inline-block;
+}
+
+
 .abstract {
+	margin: 0px 0px 0px 0px;
+	width: 100%;
+	float: left;
+	position: relative;
+}
+
+.ack {
 	margin: 0px 0px 0px 0px;
 	width: 100%;
 	float: left;
